@@ -1,0 +1,230 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Naoyuki Kawakita",
+      "role": "Group President",
+      "image": "4.png",
+      "x": 0,
+      "y": 795,
+      "width": 380,
+      "department": 1,
+      "animIndex": 0,
+      "mobileIndex": 0,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards. Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards. Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 2,
+      "name": "Yuta Sasaki",
+      "role": "CEO & CSO",
+      "image": "2.png",
+      "x": 110,
+      "y": 1326,
+      "width": 380,
+      "department": 1,
+      "animIndex": 1,
+      "mobileIndex": 2,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 3,
+      "name": "Atsushi Inaba",
+      "role": "CEO & CDO",
+      "image": "1.png",
+      "x": 92,
+      "y": 237,
+      "width": 380,
+      "department": 1,
+      "animIndex": -1,
+      "mobileIndex": 1,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 4,
+      "name": "Phan Đặng Khánh Quỳnh",
+      "role": "COO",
+      "image": "5.png",
+      "x": 536,
+      "y": 530,
+      "width": 380,
+      "department": 1,
+      "animIndex": 9,
+      "mobileIndex": 4,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 5,
+      "name": "Lê Bá Hiệp",
+      "role": "CFO",
+      "image": "6.png",
+      "x": 536,
+      "y": 1077,
+      "width": 380,
+      "department": 1,
+      "animIndex": 10,
+      "mobileIndex": 3,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 6,
+      "name": "Đỗ Trường Giang",
+      "role": "COO",
+      "image": "3.png",
+      "x": 536,
+      "y": 1603,
+      "width": 380,
+      "department": 1,
+      "animIndex": 2,
+      "mobileIndex": 5,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 14,
+      "name": "Vũ Minh San",
+      "role": "Executive Director of Business, Development cum Executive, Director of Strategic Planning",
+      "image": "7.png",
+      "x": 916,
+      "y": 216,
+      "width": 277,
+      "department": 2,
+      "animIndex": 8,
+      "mobileIndex": 6,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 12,
+      "name": "Phan Bách Lộc",
+      "role": "Digital Media Director",
+      "image": "14.png",
+      "x": 1023,
+      "y": 762,
+      "width": 277,
+      "department": 4,
+      "animIndex": 15,
+      "mobileIndex": 14,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 15,
+      "name": "Chandu Rajapreyar",
+      "role": "Group Executive Creative Director",
+      "image": "9.png",
+      "x": 1023,
+      "y": 1393,
+      "width": 277,
+      "department": 3,
+      "animIndex": 11,
+      "mobileIndex": 8,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 11,
+      "name": "Nguyễn Thị Mỹ Hạnh",
+      "role": "Group Media Director",
+      "image": "8.png",
+      "x": 1300,
+      "y": 458,
+      "width": 277,
+      "department": 4,
+      "animIndex": 14,
+      "mobileIndex": 13,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 16,
+      "name": "Nguyễn Thị Bích Ngọc",
+      "role": "Group Creative Director",
+      "image": "10.png",
+      "x": 1313,
+      "y": 1043,
+      "width": 277,
+      "department": 3,
+      "animIndex": 12,
+      "mobileIndex": 9,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 7,
+      "name": "Nguyễn Hoàng Phúc",
+      "role": "Creative Director",
+      "image": "16.png",
+      "x": 1313,
+      "y": 1682,
+      "width": 277,
+      "department": 3,
+      "animIndex": 3,
+      "mobileIndex": 11,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 13,
+      "name": "Cao Khôi Nguyên",
+      "role": "Business Development Director",
+      "image": "11.png",
+      "x": 1536,
+      "y": 152,
+      "width": 277,
+      "department": 2,
+      "animIndex": 7,
+      "mobileIndex": 7,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 10,
+      "name": "Phạm Thị Thanh Nguyên",
+      "role": "Associate Social Media Director",
+      "image": "15.png",
+      "x": 1775,
+      "y": 598,
+      "width": 277,
+      "department": 4,
+      "animIndex": 6,
+      "mobileIndex": 14,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 9,
+      "name": "Jeremy Kern Lim",
+      "role": "Creative Director",
+      "image": "12.png",
+      "x": 1785,
+      "y": 1043,
+      "width": 277,
+      "department": 3,
+      "animIndex": 3,
+      "mobileIndex": 12,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    },
+    {
+      "id": 8,
+      "name": "Phan Phương Thảo",
+      "role": "Creative Director",
+      "image": "13.png",
+      "x": 1621,
+      "y": 1393,
+      "width": 277,
+      "department": 3,
+      "animIndex": 4,
+      "mobileIndex": 10,
+      "desc": "Giang brings over 25 years of Hakuhodo excellence, steering success across FMCG, Electronics, and Automobile sectors with a keen understanding of Vietnamese culture. His leadership and proactive mindset are pivotal, mentoring our client service teams and the entire Hakuhodo Vietnam Group. Giang’s strategic vision and experience ensure unmatched results for our clients, driving market success and setting industry standards."
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Board Of Directors"
+    },
+    {
+      "id": 2,
+      "name": "Strategy & Business Development"
+    },
+    {
+      "id": 3,
+      "name": "Creative"
+    },
+    {
+      "id": 4,
+      "name": "Media & Digital"
+    }
+  ]
+}

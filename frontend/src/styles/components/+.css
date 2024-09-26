@@ -1,0 +1,7 @@
+@import "./_typo.scss";
+@import "./_variables.scss";
+@import "./base.scss";
+@import "./customScroll.scss";
+@import "./customSelect.scss";
+@import "./footer.scss";
+@import "./header.scss";

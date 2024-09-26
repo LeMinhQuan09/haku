@@ -1,0 +1,154 @@
+@function pxToVw($n) {
+  @return calc($n / 1920) * 100vw;
+}
+
+@function pxToVwMb($n) {
+  @return calc($n / 375) * 100vw;
+}
+
+@function pxToVh($n) {
+  @return calc($n / 1080) * 100vh;
+}
+
+@function calcScale($n) {
+  @return scale(calc($n / 346));
+}
+
+@mixin baseGradient() {
+  background: var(--color1)
+    linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+}
+
+@mixin baseGradientHover() {
+  background: var(--gradient-color-1)
+    linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+  transition: --gradient-color-1 0.3s ease, var(--gradient-color-2) 0.3s ease;
+  span {
+    @apply flex items-center;
+    @include textGradient(--color1, --color2);
+  }
+  &:hover {
+    --gradient-color-1: var(--color1);
+    --gradient-color-2: var(--color2);
+    span {
+      --color1: var(--gradient-color-1);
+      --color2: var(--gradient-color-2);
+    }
+  }
+}
+
+@mixin svgStopColor($color1, $color2) {
+  stop:first-child {
+    stop-color: $color1;
+  }
+  stop:last-child {
+    stop-color: $color2;
+  }
+}
+
+@mixin svgAnim($color1, $color2, $color3, $color4) {
+  stop {
+    transition: stop-color 0.3s ease;
+  }
+  stop:first-child {
+    stop-color: $color1;
+  }
+  stop:last-child {
+    stop-color: $color2;
+  }
+  &:hover {
+    stop:first-child {
+      stop-color: $color3;
+    }
+    stop:last-child {
+      stop-color: $color4;
+    }
+  }
+  .active & {
+    stop:first-child {
+      stop-color: $color3;
+    }
+    stop:last-child {
+      stop-color: $color4;
+    }
+  }
+  &.active {
+    stop:first-child {
+      stop-color: $color3;
+    }
+    stop:last-child {
+      stop-color: $color4;
+    }
+  }
+}
+
+@mixin textGradient($color1, $color2) {
+  background: var($color1) linear-gradient(to right, var($color1), var($color2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: $color1 0.3s ease, $color2 0.3s ease;
+  .safari & {
+    transition: none;
+  }
+}
+
+@mixin textGradientWithHover() {
+  background: var(--color1)
+    linear-gradient(to right, var(--color1), var(--color2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: --color1 0.3s ease, --color2 0.3s ease;
+  &:hover {
+    --color1: var(--gradient-color-1);
+    --color2: var(--gradient-color-2);
+  }
+  .safari & {
+    transition: none;
+    --color1: var(--color1);
+    --color2: var(--color2);
+  }
+}
+
+@mixin bgAnimation($color1, $color2) {
+  & {
+    --h-x: 0;
+    --h-y: 0;
+  }
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    z-index: -1;
+    background: $color1 linear-gradient(to left, $color1, $color2);
+    top: var(--h-y);
+    left: var(--h-x);
+    // transition: opacity 0.2s ease;
+    // opacity: 0;
+  }
+  &:hover {
+    &::after {
+      // opacity: 1;
+    }
+  }
+  // &::after,
+  // &::before {
+  //   display: block;
+  //   content: '';
+  //   position: absolute;
+  //   width: calc(100% + pxToVw(2));
+  //   height: calc(100% + pxToVw(2));
+  //   background: $color1;
+  //   border-radius: 100%;
+  //   z-index: -1;
+  //   animation: 2s clockwise infinite;
+  //   // filter: blur(pxToVw(2));
+  //   // opacity: 0.7;
+  // }
+  // &::after {
+  //   background: $color2;
+  //   animation: 2s counterclockwise infinite;
+  // }
+}

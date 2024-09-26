@@ -1,0 +1,21 @@
+{{#extend 'layouts/main.hbs'}}
+
+{{#content "styles"}}
+<link rel="stylesheet" href="/src/styles/home.scss">
+{{/content}}
+
+{{#content "body"}}
+
+{{> "components/teaser.hbs"}}
+
+{{> "components/aboutus.hbs"}}
+
+{{!-- <section id="work" style="height: 100dvh"></section> --}}
+
+{{!-- {{> "components/expertise.hbs"}} --}}
+
+{{/content}}
+{{#content "scripts"}}
+<script type="module" src="/src/scripts/home.js"></script>
+{{/content}}
+{{/extend}}

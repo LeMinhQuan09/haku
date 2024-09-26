@@ -1,0 +1,68 @@
+.videoplayer {
+  @apply w-full relative;
+  video {
+    border-radius: pxToVw(16);
+    border: 1px solid var(--white-30, rgba(255, 255, 255, 0.3));
+    width: 100%;
+  }
+  .play-button {
+    @apply absolute inset-0 flex items-center justify-center;
+    background: var(--overlay-70, rgba(18, 18, 18, 0.7));
+    border-radius: pxToVw(16);
+    svg {
+      width: pxToVw(156);
+      height: pxToVw(156);
+      visibility: visible;
+      @include svgAnim(
+        var(--color1),
+        var(--color2),
+        var(--gradient-color-1),
+        var(--gradient-color-2)
+      );
+    }
+  }
+  .controls {
+    @apply absolute right-0 bottom-0 flex justify-between items-center;
+    gap: pxToVw(8);
+    padding: pxToVw(24);
+    div {
+      @apply cursor-pointer;
+    }
+    svg {
+      width: pxToVw(32);
+      height: pxToVw(32);
+      @include svgAnim(
+        var(--color1),
+        var(--color2),
+        var(--gradient-color-2),
+        var(--gradient-color-1)
+      );
+    }
+    @media not all and (min-width: 640px) {
+      gap: pxToVwMb(8);
+      padding: pxToVwMb(24);
+      svg {
+        width: pxToVwMb(24);
+        height: pxToVwMb(24);
+      }
+    }
+  }
+  @media not all and (min-width: 640px) {
+    border-radius: pxToVwMb(3);
+    .play-button {
+      border-radius: pxToVwMb(3);
+      svg {
+        width: pxToVwMb(36);
+        height: pxToVwMb(36);
+      }
+    }
+    .controls {
+      gap: pxToVwMb(8);
+      padding: pxToVwMb(4) pxToVwMb(8);
+      svg {
+        width: pxToVwMb(16);
+        height: pxToVwMb(16);
+      }
+    }
+  }
+}

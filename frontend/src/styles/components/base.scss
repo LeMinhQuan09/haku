@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-margin-top: var(--h-height);
+}
+body {
+  background-color: var(--black);
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: var(--h-height);
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+
+.btn {
+  @apply text-white flex justify-center items-center rounded-full font-semibold;
+  padding: pxToVw(8) pxToVw(12);
+  @include baseGradientHover;
+  & {
+    cursor: pointer;
+  }
+  @media not all and (min-width: 640px) {
+    padding: pxToVwMb(8) pxToVwMb(12);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overscroll-behavior: none;
+}
+
+.min-sc {
+  // FIXME: Mobile bug: https://bugs.webkit.org/show_bug.cgi?id=266835
+  min-height: calc(100dvh - var(--h-height));
+}
+
+.sc {
+  // FIXME: Mobile bug: https://bugs.webkit.org/show_bug.cgi?id=266835
+  height: calc(100dvh - var(--h-height));
+}
+
+.anim-counterclockwise {
+  animation: 2s simple-counterclockwise infinite linear;
+  transform-origin: center;
+}
+
+@keyframes simple-counterclockwise {
+  0% {
+    transform: scale(0.9) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.9) rotate(-360deg);
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}

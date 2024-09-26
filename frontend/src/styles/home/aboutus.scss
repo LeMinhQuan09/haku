@@ -1,0 +1,34 @@
+#about {
+  background: url('/images/background/background-2.jpg') no-repeat top center;
+  background-size: 100%;
+  .videoplayer {
+    padding: pxToVw(17) pxToVw(48);
+    margin-bottom: pxToVw(80);
+    .play-button {
+      top: pxToVw(17);
+      left: pxToVw(48);
+      bottom: pxToVw(17);
+      right: pxToVw(48);
+    }
+    .controls {
+      right: pxToVw(48);
+      bottom: pxToVw(17);
+    }
+  }
+  @media not all and (min-width: 640px) {
+    .videoplayer {
+      padding: pxToVwMb(40) pxToVwMb(16) pxToVwMb(64);
+      margin-bottom: 0;
+      .play-button {
+        top: pxToVwMb(40);
+        left: pxToVwMb(16);
+        bottom: pxToVwMb(64);
+        right: pxToVwMb(16);
+      }
+      .controls {
+        right: pxToVwMb(16);
+        bottom: pxToVwMb(64);
+      }
+    }
+  }
+}

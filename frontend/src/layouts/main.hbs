@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakuhodo</title>
+  {{> "components/styles.hbs"}}
+  {{#block "styles"}}
+  {{/block}}
+  {{> "components/favicon.hbs"}}
+</head>
+
+<body>
+  {{#block "header"}}
+  {{> "components/header.hbs"}}
+  {{/block}}
+  <div class="main">
+    {{#block "body"}}
+    {{/block}}
+  </div>
+  {{#block "footer"}}
+  {{> "components/footer.hbs"}}
+  {{/block}}
+  {{> "components/scripts.hbs"}}
+  {{#block "scripts"}}
+  {{/block}}
+</body>
+
+</html>

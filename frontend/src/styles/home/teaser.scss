@@ -1,0 +1,63 @@
+#teaser {
+  @apply relative;
+  .teaser-video {
+    @apply w-full object-cover object-center relative;
+    &.fullscreen {
+      @apply object-contain;
+    }
+  }
+  .more {
+    @apply absolute flex flex-col items-center justify-start left-1/2 -translate-x-1/2 cursor-pointer;
+    top: calc(100% - pxToVw(178));
+    gap: pxToVw(16);
+    text-shadow: 0 0 pxToVw(8) rgba(#000, 0.5);
+    .icon {
+      @apply rounded-full;
+      width: pxToVw(28 + 32);
+      height: pxToVw(54 + 48);
+      padding: pxToVw(24) pxToVw(16);
+      background: rgba(#272727, 0.5);
+    }
+    path {
+      stroke-width: pxToVw(3);
+    }
+    @media not all and (min-width: 640px) {
+      top: calc(100% - pxToVwMb(108));
+      gap: pxToVwMb(8);
+      .icon {
+        width: pxToVwMb(14 + 16);
+        height: pxToVwMb(27 + 24);
+        padding: pxToVwMb(12) pxToVwMb(8);
+      }
+      path {
+        stroke-width: pxToVwMb(3);
+      }
+    }
+  }
+  .controls {
+    @apply absolute right-0 bottom-0 flex justify-between items-center;
+    gap: pxToVw(8);
+    padding: pxToVw(24);
+    div {
+      @apply cursor-pointer;
+    }
+    svg {
+      width: pxToVw(32);
+      height: pxToVw(32);
+      @include svgAnim(
+        var(--color1),
+        var(--color2),
+        var(--gradient-color-2),
+        var(--gradient-color-1)
+      );
+    }
+    @media not all and (min-width: 640px) {
+      gap: pxToVwMb(8);
+      padding: pxToVwMb(24);
+      svg {
+        width: pxToVwMb(24);
+        height: pxToVwMb(24);
+      }
+    }
+  }
+}

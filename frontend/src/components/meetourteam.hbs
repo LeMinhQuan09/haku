@@ -1,0 +1,95 @@
+<div id="meet-our-team" class="min-sc">
+  <div class="title">
+    <h2 class="typo-big">Meet Our Team</h2>
+    <select name="departments" id="departments">
+      <option value="0">All Departments</option>
+      {{#each departments as |department|}}
+      <option value="{{department.id}}">{{department.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="meet-our-team">
+    <svg class="line" viewBox="0 0 1863 2040" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle id="team-circle" cx="843" cy="1020" r="1019" stroke="url(#team-line)" stroke-width="2" />
+      <defs>
+        <linearGradient id="team-line" x1="843" y1="2040" x2="0" y2="2040" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF1A42" />
+          <stop offset="1" stop-color="#7C0059" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="members">
+      {{#each members as |member|}}
+      <div class="member" data-x="{{member.x}}" data-y="{{member.y}}" data-width="{{member.width}}"
+        data-department="{{member.department}}" data-order="{{member.animIndex}}"
+        data-order-mobile="{{member.mobileIndex}}" data-member="{{member.id}}">
+        <div class="img"><img src="/images/members/{{member.image}}" alt="{{member.name}}" /></div>
+        <h3 class="title-2">
+          {{member.name}}
+          <div class="role body-3">{{member.role}}</div>
+        </h3>
+      </div>
+      {{/each}}
+    </div>
+    <div class="member-details">
+      <div class="member-details__overlay"></div>
+      <div class="member-details__box">
+        <div class="member-details__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+            <path d="M17.5 17.5L38.5 38.5M17.5 38.5L38.5 17.5" stroke="url(#paint0_linear_2004_17022)"
+              stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="paint0_linear_2004_17022" x1="17.5" y1="28" x2="38.5" y2="28"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DD1940" />
+                <stop offset="1" stop-color="#92035F" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="member-details__content">
+          {{#each members as |member|}}
+          <div class="member-details__content__item" data-member="{{member.id}}" data-order="{{member.animIndex}}"
+            data-order-mobile="{{member.mobileIndex}}" data-department="{{member.department}}">
+            <div class="bg"></div>
+            <div class="img"><img src="/images/members/{{member.image}}" alt="{{member.name}}" /></div>
+            <div class="info">
+              <h3 class="title-2">{{member.name}}</h3>
+              <div class="role body-3">{{member.role}}</div>
+              <div class="description body-3 custom-scroll">{{member.desc}}</div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        <div class="member-details__controls-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path
+              d="M31.0587 10.4409C31.3396 10.7222 31.4974 11.1034 31.4974 11.5009C31.4974 11.8984 31.3396 12.2797 31.0587 12.5609L19.6207 24.0009L31.0587 35.4409C31.1979 35.5801 31.3083 35.7454 31.3836 35.9273C31.459 36.1091 31.4977 36.3041 31.4977 36.5009C31.4977 36.6978 31.459 36.8927 31.3836 37.0746C31.3083 37.2565 31.1979 37.4217 31.0587 37.5609C30.9195 37.7001 30.7542 37.8106 30.5723 37.8859C30.3905 37.9612 30.1955 38 29.9987 38C29.8018 38 29.6069 37.9612 29.425 37.8859C29.2431 37.8106 29.0779 37.7001 28.9387 37.5609L16.4387 25.0609C16.1578 24.7797 16 24.3984 16 24.0009C16 23.6034 16.1578 23.2222 16.4387 22.9409L28.9387 10.4409C29.2199 10.16 29.6012 10.0023 29.9987 10.0023C30.3962 10.0023 30.7774 10.16 31.0587 10.4409Z"
+              fill="url(#paint0_linear_2505_3941)" />
+            <defs>
+              <linearGradient id="paint0_linear_2505_3941" x1="23.7489" y1="38" x2="23.7489" y2="10.0023"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DD1940" />
+                <stop offset="1" stop-color="#92035F" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="member-details__controls-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path
+              d="M16.4391 10.4409C16.1582 10.7222 16.0004 11.1034 16.0004 11.5009C16.0004 11.8984 16.1582 12.2797 16.4391 12.5609L27.8771 24.0009L16.4391 35.4409C16.2999 35.5801 16.1895 35.7454 16.1142 35.9273C16.0388 36.1091 16.0001 36.3041 16.0001 36.5009C16.0001 36.6978 16.0388 36.8927 16.1142 37.0746C16.1895 37.2565 16.2999 37.4217 16.4391 37.5609C16.5783 37.7001 16.7436 37.8106 16.9255 37.8859C17.1073 37.9612 17.3023 38 17.4991 38C17.696 38 17.8909 37.9612 18.0728 37.8859C18.2547 37.8106 18.4199 37.7001 18.5591 37.5609L31.0591 25.0609C31.34 24.7797 31.4978 24.3984 31.4978 24.0009C31.4978 23.6034 31.34 23.2222 31.0591 22.9409L18.5591 10.4409C18.2779 10.16 17.8966 10.0023 17.4991 10.0023C17.1016 10.0023 16.7204 10.16 16.4391 10.4409Z"
+              fill="url(#paint0_linear_2505_3907)" />
+            <defs>
+              <linearGradient id="paint0_linear_2505_3907" x1="23.7489" y1="38" x2="23.7489" y2="10.0023"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DD1940" />
+                <stop offset="1" stop-color="#92035F" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

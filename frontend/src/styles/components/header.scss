@@ -1,0 +1,197 @@
+#header {
+  @apply flex justify-between items-center fixed top-0 w-full;
+  padding: pxToVw(32) pxToVw(80);
+  background: rgba(18, 18, 18, 0.01);
+  backdrop-filter: blur(pxToVw(25));
+  z-index: 999;
+  @media not all and (min-width: 640px) {
+    padding: pxToVwMb(16);
+    // background: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(pxToVwMb(25));
+  }
+  .hr-line {
+    display: none;
+    @media not all and (min-width: 640px) {
+      display: block;
+      width: calc(100% - pxToVwMb(50));
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+  .hamburger {
+    @apply max-sm:block hidden;
+    @include svgAnim(
+      var(--color1),
+      var(--color2),
+      var(--gradient-color-1),
+      var(--gradient-color-2)
+    );
+  }
+  .logo {
+    width: pxToVw(251);
+    @media not all and (min-width: 640px) {
+      width: pxToVwMb(125);
+    }
+  }
+  .nav {
+    @apply flex items-center max-sm:flex-col max-sm:fixed max-sm:inset-x-0 max-sm:h-[100dvh] max-sm:justify-items-center max-sm:translate-x-full max-sm:scale-x-0 relative;
+    gap: pxToVw(64);
+    transition: all 0.3s ease;
+    @media not all and (min-width: 640px) {
+      background: var(--black);
+      gap: pxToVwMb(36);
+      top: var(--h-height);
+      &.active {
+        @apply translate-x-0 scale-x-100;
+      }
+    }
+    .active-dot {
+      @apply absolute top-0 left-0 w-2 h-2 rounded-full;
+      @include baseGradient;
+      visibility: hidden;
+    }
+    > ul {
+      @apply flex items-center max-sm:flex-col max-sm:w-full relative;
+      gap: pxToVw(64);
+      li,
+      a {
+        @apply flex items-center;
+      }
+      @media not all and (min-width: 640px) {
+        gap: pxToVwMb(36);
+      }
+    }
+    .nav-link {
+      @include textGradientWithHover;
+      &.active {
+        @media not all and (min-width: 640px) {
+          --color1: var(--gradient-color-1);
+          --color2: var(--gradient-color-2);
+        }
+      }
+    }
+  }
+  .language-dropdown {
+    @extend .body-4;
+    @apply flex items-center relative max-sm:w-full max-sm:justify-center;
+    gap: pxToVw(4);
+    .language-dropdown__btn {
+      @apply flex items-center;
+      gap: pxToVw(4);
+      @include textGradientWithHover;
+      &:hover {
+        .icon-arrow {
+          @include svgStopColor(
+            var(--gradient-color-1),
+            var(--gradient-color-2)
+          );
+        }
+      }
+    }
+    .icon-arrow {
+      display: block;
+      width: pxToVw(16);
+      height: pxToVw(16);
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+      @media not all and (min-width: 640px) {
+        width: pxToVwMb(16);
+        height: pxToVwMb(16);
+      }
+      stop {
+        transition: stop-color 0.3s ease;
+      }
+      stop:first-child {
+        stop-color: var(--color1);
+      }
+      stop:last-child {
+        stop-color: var(--color2);
+      }
+    }
+    ul {
+      @apply flex absolute right-0 flex-col items-start justify-center max-sm:w-full scale-y-0 opacity-0;
+      top: pxToVw(32);
+      padding: pxToVw(8);
+      background: rgba(15, 15, 15, 0.8);
+      backdrop-filter: blur(pxToVw(25));
+      transition: all 0.1s ease;
+      transform-origin: top right;
+      @media not all and (min-width: 640px) {
+        top: pxToVwMb(32);
+        padding: pxToVwMb(8);
+        background: var(--black);
+      }
+      li {
+        @apply relative;
+        @include textGradientWithHover;
+        & {
+          min-width: pxToVw(100);
+          padding: pxToVw(8) pxToVw(16);
+          @media not all and (min-width: 640px) {
+            @apply w-full;
+            padding: pxToVwMb(8) 0;
+          }
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+        &:first-child {
+          padding-top: 0;
+        }
+        a {
+          @apply flex justify-between items-center max-sm:w-full;
+          span {
+            @apply flex items-center justify-center flex-1;
+          }
+        }
+        img {
+          @apply absolute;
+          top: pxToVw(2);
+          right: pxToVw(4);
+          width: pxToVw(16);
+          height: pxToVw(16);
+          @media not all and (min-width: 640px) {
+            top: pxToVwMb(2);
+            right: pxToVwMb(4);
+            width: pxToVwMb(16);
+            height: pxToVwMb(16);
+          }
+        }
+      }
+    }
+    &.active {
+      .language-dropdown__btn {
+        --color1: var(--gradient-color-1);
+        --color2: var(--gradient-color-2);
+      }
+      .icon-arrow {
+        transform: rotate(0deg);
+        @include svgStopColor(var(--gradient-color-1), var(--gradient-color-2));
+      }
+      ul {
+        @apply scale-y-100 opacity-100;
+      }
+    }
+  }
+  .global-link {
+    @apply flex items-center;
+    gap: pxToVw(16);
+    span {
+      display: none;
+    }
+    @media not all and (min-width: 640px) {
+      gap: pxToVwMb(16);
+      span {
+        display: block;
+      }
+    }
+  }
+}

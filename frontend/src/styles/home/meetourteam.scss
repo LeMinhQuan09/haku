@@ -1,0 +1,249 @@
+#meet-our-team {
+  background: url('/images/background/background-3.jpg') repeat-y top center;
+  background-size: 100%;
+  .meet-our-team {
+    @apply relative;
+    width: pxToVw(1983);
+    height: pxToVw(2132);
+    margin-left: pxToVw(-96);
+    @media not all and (min-width: 640px) {
+      @apply w-auto h-auto ml-0;
+      padding: pxToVwMb(16);
+    }
+  }
+  .title {
+    @apply flex items-baseline justify-between whitespace-nowrap w-full max-sm:flex-col;
+    padding: 0 pxToVw(77) pxToVw(32);
+    @media not all and (min-width: 640px) {
+      padding: 0 pxToVwMb(16) pxToVwMb(24);
+      gap: pxToVwMb(16);
+      // top: pxToVwMb(53);
+      z-index: 1;
+      // background: rgba(18, 18, 18, 0.01);
+      // backdrop-filter: blur(pxToVwMb(25));
+      // top: var(--h-height);
+    }
+    h2 {
+      @apply uppercase;
+      line-height: pxToVw(200);
+      @media not all and (min-width: 640px) {
+        line-height: pxToVwMb(57);
+      }
+    }
+  }
+  .line {
+    @apply absolute;
+    top: pxToVw(74);
+    width: pxToVw(1916);
+    height: pxToVw(1926);
+    margin-left: pxToVw(96);
+    @media not all and (min-width: 640px) {
+      @apply hidden;
+    }
+  }
+  .members {
+    @apply absolute inset-0 max-sm:grid max-sm:grid-cols-2 max-sm:relative;
+    @media not all and (min-width: 640px) {
+      gap: pxToVwMb(16);
+    }
+  }
+  .member {
+    @apply absolute flex flex-col items-center justify-center text-center cursor-pointer max-sm:relative max-sm:justify-start;
+    gap: pxToVw(16);
+    .img {
+      @apply aspect-square relative w-fit rounded-full;
+      background: var(--black);
+    }
+    img {
+      @apply rounded-full;
+    }
+    &.disabled {
+      @apply pointer-events-none;
+    }
+    .title-2 {
+      @media not all and (min-width: 640px) {
+        font-size: pxToVwMb(16);
+      }
+    }
+    .body-3 {
+      @media not all and (min-width: 640px) {
+        font-size: pxToVwMb(12);
+      }
+    }
+    &:not(.disabled) {
+      .img {
+        @include bgAnimation(var(--gradient-color-1), var(--gradient-color-2));
+      }
+    }
+    // .img {
+    //   @apply w-full aspect-square relative;
+    //   &::before {
+    //     @apply absolute inset-0 rounded-full transition-all;
+    //     @include baseGradient;
+    //     content: '';
+    //     z-index: -1;
+    //     transition-duration: 0.3s;
+    //   }
+    // }
+    // &:hover {
+    //   .img {
+    //     &::before {
+    //       transform: translate(pxToVw(8), pxToVw(8));
+    //     }
+    //   }
+    // }
+  }
+
+  .member-details {
+    @apply fixed flex justify-center w-full h-full invisible inset-x-0;
+    height: calc(100dvh - var(--h-height));
+    top: var(--h-height);
+    z-index: 998;
+    &__box {
+      @apply relative top-1/2 -translate-y-1/2;
+      width: pxToVw(1118 + 48);
+      height: pxToVw(380 + 72);
+      @media not all and (min-width: 640px) {
+        width: pxToVwMb(295 + 48);
+        height: pxToVwMb(530 + 72);
+        max-height: calc(100% - var(--h-height));
+      }
+    }
+    &__overlay {
+      @apply absolute inset-0;
+      background: rgba(15, 15, 15, 0.5);
+      transition: all 0.2s ease;
+    }
+    &.active {
+      .member-details__overlay {
+        backdrop-filter: blur(pxToVw(25));
+        @media not all and (min-width: 640px) {
+          backdrop-filter: blur(pxToVwMb(25));
+        }
+      }
+    }
+    &__close {
+      @apply absolute top-0 right-0;
+      padding: pxToVw(16);
+      cursor: pointer;
+      z-index: 999;
+      svg {
+        width: pxToVw(48);
+        height: pxToVw(48);
+        @include svgAnim(
+          var(--color1),
+          var(--color2),
+          var(--gradient-color-2),
+          var(--gradient-color-1)
+        );
+      }
+      @media not all and (min-width: 640px) {
+        padding: pxToVwMb(16);
+        svg {
+          width: pxToVwMb(36);
+          height: pxToVwMb(36);
+        }
+      }
+    }
+    &__content {
+      @apply absolute inset-0 overflow-hidden;
+      &__item {
+        @apply flex items-center justify-start absolute inset-0 overflow-hidden max-sm:flex-col w-full h-full;
+        padding: pxToVw(36) pxToVw(96);
+        gap: pxToVw(36);
+        z-index: 1;
+        @media not all and (min-width: 640px) {
+          padding: pxToVwMb(24);
+          gap: pxToVwMb(16);
+        }
+        .img {
+          @apply relative rounded-full flex-shrink-0 flex-grow max-sm:flex-grow-0;
+          background: var(--black);
+          img {
+            width: pxToVw(380);
+            height: pxToVw(380);
+            @media not all and (min-width: 640px) {
+              width: pxToVwMb(215);
+              height: pxToVwMb(215);
+            }
+          }
+          @include bgAnimation(
+            var(--gradient-color-1),
+            var(--gradient-color-2)
+          );
+        }
+        &.disabled {
+          @apply pointer-events-none hidden;
+        }
+      }
+      .info {
+        @apply flex flex-col items-start justify-center h-full;
+        @media not all and (min-width: 640px) {
+          @apply h-auto;
+          flex: 1;
+          min-height: 0;
+        }
+        .title-2 {
+          @media not all and (min-width: 640px) {
+            font-size: pxToVwMb(16);
+            padding-bottom: pxToVwMb(4);
+          }
+        }
+        .body-3 {
+          padding-bottom: pxToVw(8);
+          @media not all and (min-width: 640px) {
+            padding-bottom: pxToVwMb(8);
+            font-size: pxToVwMb(14);
+          }
+        }
+        .role {
+          @media not all and (min-width: 640px) {
+            font-size: pxToVwMb(12);
+          }
+        }
+        .description {
+          margin-bottom: pxToVw(36);
+        }
+      }
+      .bg {
+        @apply absolute inset-0;
+        z-index: -1;
+        background: rgba(15, 15, 15, 0.8);
+      }
+    }
+    &__controls {
+      &-next,
+      &-prev {
+        @apply absolute top-1/2 -translate-y-1/2 flex items-center justify-center z-10;
+        width: pxToVw(48);
+        height: pxToVw(48);
+        cursor: pointer;
+        svg {
+          @include svgAnim(
+            var(--color1),
+            var(--color2),
+            var(--gradient-color-2),
+            var(--gradient-color-1)
+          );
+        }
+        @media not all and (min-width: 640px) {
+          width: pxToVwMb(36);
+          height: pxToVwMb(36);
+          top: pxToVwMb(calc(215 / 2) + 36);
+        }
+      }
+      &-next {
+        right: pxToVw(16);
+        @media not all and (min-width: 640px) {
+          right: pxToVwMb(0);
+        }
+      }
+      &-prev {
+        left: pxToVw(16);
+        @media not all and (min-width: 640px) {
+          left: pxToVwMb(0);
+        }
+      }
+    }
+  }
+}

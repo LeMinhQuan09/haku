@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.source-sans,
+.playfair {
+  font-optical-sizing: auto;
+}
+
+.source-sans {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.typo-big {
+  @extend .playfair;
+  font-size: pxToVw(142);
+}
+
+.typo-small {
+  @extend .source-sans;
+  font-size: 40px;
+}
+
+.h1 {
+  @extend .playfair;
+  font-size: pxToVw(60);
+  font-weight: 700;
+}
+
+.h2 {
+  @extend .playfair;
+  font-size: pxToVw(32);
+}
+
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  @apply font-bold;
+}
+
+.title-1 {
+  @extend .source-sans;
+  font-size: pxToVw(32);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(32);
+  }
+}
+
+.title-2 {
+  @extend .source-sans;
+  font-size: pxToVw(24);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(24);
+  }
+}
+
+.title-3 {
+  @extend .source-sans;
+  font-size: pxToVw(20);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(20);
+  }
+}
+
+.title-4 {
+  @extend .source-sans;
+  font-size: pxToVw(16);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(16);
+  }
+}
+
+body {
+  @extend .source-sans;
+  font-size: pxToVw(16);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(16);
+  }
+}
+
+.body-1,
+.body-2,
+.body-3,
+.body-4,
+.body-5 {
+  @apply font-normal;
+}
+
+.body-1 {
+  font-size: pxToVw(24);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(24);
+  }
+}
+.body-2 {
+  font-size: pxToVw(20);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(20);
+  }
+}
+.body-3 {
+  font-size: pxToVw(16);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(16);
+  }
+}
+.body-4 {
+  font-size: pxToVw(14);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(14);
+  }
+}
+.body-5 {
+  font-size: pxToVw(12);
+  @media not all and (min-width: 640px) {
+    font-size: pxToVwMb(12);
+  }
+}
+
+.button-1 {
+  @extend .body-3;
+}
+
+.button-2 {
+  @extend .body-4;
+}
