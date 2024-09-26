@@ -1,1 +1,11 @@
 hello world
+
+
+
+
+bây giờ ông copy src vô thư mục test này là dùng bth rồi cứ add. commit -m ,    push code lên git bth á ong. hoặc là ông tạo thư mục tronồnlder làm việc của ông rồi 
+clon e lại repo nha
+
+
+
+git clone https://github.com/LeMinhQuan09/haku.git
